@@ -93,5 +93,137 @@
       }
     },
     "timestamp": 1698208992
+  },
+  "RSpec": {
+    "coverage": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/helpers/registrations_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/helpers/sessions_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/registrations_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/sessions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/mailers/user_mailer.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/mailers/application_mailer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1698558723
   }
 }

@@ -11,16 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20231025052409) do
+ActiveRecord::Schema.define(version: 20231029064529) do
 
-  create_table "movies", force: :cascade do |t|
-    t.string   "title"
-    t.string   "rating"
-    t.text     "description"
-    t.datetime "release_date"
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email",              null: false
+    t.string   "encrypted_password"
+    t.datetime "verified_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "director"
+    t.string   "verification_code"
+    t.string   "uni"
+    t.string   "password_digest"
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["uni"], name: "index_users_on_uni", unique: true
 
 end

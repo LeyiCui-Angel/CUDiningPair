@@ -1,0 +1,9 @@
+<h2>Verification</h2>
+
+<p>Verificaion email sent. Enter the 6-digit code:</p>
+
+<%= form_for :registration, url: check_verification_path, method: :post do |f| %>
+    <%= f.label :verification_code, "Verification Code" %>
+    <%= f.text_field :verification_code %>
+    <%= f.submit "Verify" %>
+<% end %>  

@@ -9,6 +9,9 @@ require File.expand_path('../boot', __FILE__)
 # require "rails/test_unit/railtie"
 require "rails/all"
 
+require 'dotenv'
+Dotenv.load
+
 Bundler.require(:default, Rails.env)
 
 module Rottenpotatoes

@@ -1,4 +1,4 @@
-Rottenpotatoes::Application.configure do
+Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # The test environment is used exclusively to run your application's
@@ -39,4 +39,18 @@ Rottenpotatoes::Application.configure do
 
   # Allow pass debug_assets=true as a query parameter to load pages with unpackaged assets
   config.assets.allow_debugging = true
+
+    # Define default URL options for ActionMailer
+    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  
+    # Send email
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      address: ENV['SMTP_ADDRESS'],
+      port: ENV['SMTP_PORT'].to_i,
+      user_name: ENV['SMTP_USER_NAME'],
+      password: ENV['SMTP_PASSWORD'],
+      authentication: ENV['SMTP_AUTHENTICATION'],
+      enable_starttls_auto: ENV['SMTP_STARTTLS'] == 'true'
+    }
 end
