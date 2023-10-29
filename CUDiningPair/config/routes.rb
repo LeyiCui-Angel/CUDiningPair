@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
+  root 'welcome#index'
+  
   # Registrations routes
   get 'signup', to: 'registrations#new', as: 'signup'
   post 'registrations', to: 'registrations#create'
 
   # Sessions routes
   get 'login', to: 'sessions#new', as: 'login'
-  post 'login', to: 'sessions#create'
+  post 'login', to: 'sessions#create', as: 'sessions'
   delete 'logout', to: 'sessions#destroy', as: 'logout'
 
   # Other routes can go here...

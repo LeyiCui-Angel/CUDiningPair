@@ -1,4 +1,7 @@
 class RegistrationsController < ApplicationController
+  # redirect if logged in
+  skip_before_action :require_login, only: [:new, :create, :verify]
+
   def new
   end
 
