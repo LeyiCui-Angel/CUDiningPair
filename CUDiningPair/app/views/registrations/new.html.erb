@@ -1,4 +1,4 @@
-<%= form_for :user, url: registrations_path do |f| %>
+<%= form_for :user, url: signup_path do |f| %>
     <div class="field">
       <%= f.label :uni, "UNI" %><br>
       <%= f.text_field :uni %>
@@ -17,3 +17,7 @@
 <% end %>
 
 <p>Already have an account? <%= link_to 'Log in here', login_path %></p>
+
+<% if flash[:error].present? %>
+  <div class="alert alert-danger"><%= flash[:error] %></div>
+<% end %>

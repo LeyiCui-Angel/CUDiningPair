@@ -13,4 +13,8 @@
 <% end %>
 
 <p>Not registered? <%= link_to 'Sign up here', signup_path %></p>
+
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
   

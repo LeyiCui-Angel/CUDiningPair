@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+/* custom.css */
+
+.field_with_errors {
+    display: inline-block; /* Prevents the default block-level styling that causes line breaks */
+  }
+  
+.field_with_errors input[type="text"],
+.field_with_errors textarea,
+.field_with_errors select {
+    /* Add your styles here */
+    border-color: #f00; /* Example to change the border color */
+    /* Make sure not to include styles that would cause a line break, like margin or display properties that expand the block */
+}
+  
+

@@ -114,46 +114,14 @@
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/registrations_controller.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/helpers/users_helper.rb": {
         "lines": [
           1,
-          1,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/application_controller.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/helpers/welcome_helper.rb": {
         "lines": [
-          1,
-          null,
-          null,
           1,
           null
         ]
@@ -161,42 +129,59 @@
       "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/sessions_controller.rb": {
         "lines": [
           1,
+          null,
+          1,
+          null,
           1,
           null,
           null,
           1,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
           1,
           0,
           0,
           0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
           null,
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/mailers/user_mailer.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/application_controller.rb": {
         "lines": [
           1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
           1,
           0,
           0,
           0,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/mailers/application_mailer.rb": {
-        "lines": [
+          null,
           1,
+          0,
+          null,
+          null,
           1,
-          1,
+          0,
+          null,
+          0,
+          null,
+          null,
           null
         ]
       },
@@ -211,7 +196,7 @@
           1,
           null,
           1,
-          0,
+          2,
           null,
           null
         ]
@@ -222,8 +207,115 @@
           1,
           null
         ]
+      },
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/mailers/user_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null
+        ],
+        "branches": {
+        }
+      },
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/users_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/welcome_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          null
+        ],
+        "branches": {
+        }
+      },
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/registrations_controller.rb": {
+        "lines": [
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1698558723
+    "timestamp": 1698616527
   }
 }

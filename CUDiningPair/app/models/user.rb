@@ -1,6 +1,12 @@
 class User < ApplicationRecord
     has_secure_password
-  
+
+    validates :uni, uniqueness: true 
+    validates :password, confirmation: true
+    validates :password_confirmation, presence: true
+
+    #{ case_sensitive: true }
+
     # Generate a random verification code before creating the user
     before_create :generate_verification_code
   

@@ -1,23 +1,25 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
-
   before_action :require_login
-  
+  helper_method :current_user, :logged_in?
+
   private
-  
+
   def require_login
-    redirect_to login_path unless logged_in?
+    unless logged_in?
+      flash[:alert] = "You must be logged in to access this section"
+      redirect_to login_path # Redirects to the login path if not logged in
+    end
   end
-  
+
   def logged_in?
-    # Your logic for checking if a user is logged in, usually you check if there's a current_user
-    # Example: !current_user.nil?
+    current_user.present? # Checks if current_user exists
   end
   
-  # You would have a method to define 'current_user' based on session or cookie
-  # def current_user
-  #   # Example: User.find(session[:user_id]) if session[:user_id]
-  # end
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id] # Caches the current_user to avoid multiple DB lookups
+    rescue ActiveRecord::RecordNotFound
+    session[:user_id] = nil # If the user isn't found, clear the session
+  end
 end
+

@@ -1,23 +1,25 @@
 Rails.application.routes.draw do
+  # Basic welcome route
   get 'welcome/index'
-
   root 'welcome#index'
   
   # Registrations routes
   get 'signup', to: 'registrations#new', as: 'signup'
-  post 'registrations', to: 'registrations#create'
-
+  post 'signup', to: 'registrations#create' # This uses the 'signup' path for consistency
+  
   # Sessions routes
   get 'login', to: 'sessions#new', as: 'login'
-  post 'login', to: 'sessions#create', as: 'sessions'
+  post 'login', to: 'sessions#create', as: 'sessions' # If you need a path helper, consider using 'create_session'
   delete 'logout', to: 'sessions#destroy', as: 'logout'
 
-  # Other routes can go here...
-  get 'registrations/new', to: 'registrations#new', as: 'new_registration'
-  post 'registrations', to: 'registrations#create'
-
+  # Verification routes (assumes one to show form, another to submit)
   get 'verification', to: 'registrations#verify', as: 'verification'
-  post 'check_verification', to: 'registrations#verify', as: 'check_verification'
+  post 'verification', to: 'registrations#check_verification', as: 'check_verification'
+  
+  # User profile route
+  resources :users, only: [:show] # Assumes a show action for a user's profile page
 
+  # Any additional routes can go here...
 end
+
 

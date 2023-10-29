@@ -7,6 +7,11 @@ class RegistrationsController < ApplicationController
 
   def create
     @user = User.new(user_params)
+
+    if params[:user][:password] != params[:user][:password_confirmation]
+      flash.now[:error] = 'Passwords do not match!'
+      render 'new' and return
+    end
     
     # Automatically set the email value
     @user.email = "#{@user.uni}@columbia.edu"
@@ -17,7 +22,11 @@ class RegistrationsController < ApplicationController
       UserMailer.send_verification_code(@user, @user.verification_code).deliver_now
       redirect_to verification_path
     else
-      # Handle the error case
+      # Check if the 'uni' attribute has any errors
+      if @user.errors.added?(:uni, :taken)
+        flash.now[:error] = 'You have already registered with this UNI!'
+      end
+      render 'new'  # Assuming 'new' template is for user registration
     end
   end  
   
