@@ -1,0 +1,16 @@
+<h2>Create New Restaurant</h2>
+
+<%= form_tag restaurants_path, :class => 'form' do %>
+  <%= label :restaurant, :name, 'Name', :class => 'col-form-label' %>
+  <%= text_field :restaurant, :name, :class => 'form-control' %>
+  <%= label :restaurant, :rating, 'Rating', :class => 'col-form-label'  %>
+  <%= select :restaurant, :rating, options_for_select([1, 2, 3, 4, 5], 1), {}, {:class => 'form-control col-1'} %>
+  <%= label :restaurant, :location, 'Location', :class => 'col-form-label'  %>
+  <%= text_field :restaurant, :location, :class => 'form-control' %>
+  <%= label :restaurant, :cuisine, 'Cuisine', :class => 'col-form-label'  %>
+ <%= select :restaurant, :cuisine, ['Hot Spicy', 'Vege', 'Not Spicy'], { selected: 'Hot Spicy' }, { class: 'form-control' } %>
+  <br/>
+  <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
+  <%= link_to 'Cancel', restaurants_path, :class => 'btn btn-secondary' %>
+<% end %>
+

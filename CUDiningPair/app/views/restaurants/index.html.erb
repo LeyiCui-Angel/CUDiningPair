@@ -1,0 +1,62 @@
+<!-- This file is app/views/restaurants/index.html.erb -->
+<h2>All Restaurants</h2>
+
+<%= form_tag restaurants_path, method: :get, id: 'ratings_form' do %>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-2">
+        <label for="rating" class="col-form-label">Rating:</label>
+        <%= select_tag 'rating', options_for_select([1, 2, 3, 4, 5], params[:rating]), include_blank: 'Any', class: 'form-control' %>
+      </div>
+      <div class="col-2">
+        <% ['Hot Spicy', 'Vege', 'Not Spicy'].each do |cuisine| %>
+          <div class="form-check form-check-inline">
+            <%= check_box_tag "cuisine[#{cuisine}]", "1", @cuisine_to_show.include?(cuisine), class: 'form-check-input' %>
+            <%= label_tag "cuisine[#{cuisine}]", cuisine, class: 'form-check-label' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <%= submit_tag 'Filter', class: 'btn btn-primary' %>
+<% end %>
+
+<div class="text-right">
+  <%= link_to 'Back to Welcome Page', welcome_index_path, class: 'btn btn-primary' %>
+</div>
+
+<table class="table table-striped col-md-12" id="restaurants">
+  <thead>
+    <tr>
+      <th>Restaurant Name</th>
+      <th>Rating</th>
+      <th>Location</th>
+      <th>Cuisine</th>
+      <th>More Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+      <tr>
+        <td>
+          <%= restaurant.name %>
+        </td>
+        <td>
+          <%= restaurant.rating %>
+        </td>
+        <td>
+          <%= restaurant.location %>
+        </td>
+        <td>
+          <%= restaurant.cuisine %> <!-- Add this line to display the cuisine -->
+        </td>
+        <td>
+          <%= link_to "More about #{restaurant.name}", restaurant_path(restaurant) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Add new restaurant', new_restaurant_path, class: 'btn btn-primary' %>
+

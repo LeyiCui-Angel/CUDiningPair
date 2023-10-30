@@ -13,6 +13,15 @@
 
 ActiveRecord::Schema.define(version: 20231029064529) do
 
+  create_table "restaurants", force: :cascade do |t|
+    t.decimal "custom_id"
+    t.string  "name"
+    t.string  "location"
+    t.decimal "rating",      precision: 3, scale: 1
+    t.decimal "ratingcount"
+    t.string  "cuisine"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email",              null: false

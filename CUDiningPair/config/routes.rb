@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   # User profile route
   resources :users, only: [:show] # Assumes a show action for a user's profile page
 
+  # Merge the 'restaurants' route here
+  resources :restaurants
+  
   # Any additional routes can go here...
 end
 

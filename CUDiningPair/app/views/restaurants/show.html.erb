@@ -1,0 +1,28 @@
+<!-- app/views/restaurants/show.html.erb -->
+<h2>Details about <em><%= @restaurant.name %></em></h2>
+
+<ul id="details">
+  <li>
+    Rating:
+    <%= @restaurant.rating %>
+  </li>
+  <li>
+    Location:
+    <%= @restaurant.location %>
+  </li>
+  <li>
+    Cuisine:
+    <%= @restaurant.cuisine %>
+  </li>
+</ul>
+
+<h3>Description:</h3>
+<p id="description">
+  <!-- Add the description of the restaurant here, if available -->
+</p>
+
+<div class="row">
+  <%= link_to 'Edit', edit_restaurant_path(@restaurant), class: 'btn btn-primary col-2' %>
+  <%= link_to 'Delete', restaurant_path(@restaurant), 'data-method' => 'delete', 'data-confirm' => 'Are you sure?', class: 'btn btn-danger col-2' %>
+  <%= link_to 'Back to restaurant list', restaurants_path, class: 'btn btn-primary col-2' %>
+</div>
