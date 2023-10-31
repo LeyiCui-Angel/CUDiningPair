@@ -90,3 +90,8 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+Capybara.configure do |config|
+  # Other Capybara configuration options
+
+  config.default_max_wait_time = 5
+end
