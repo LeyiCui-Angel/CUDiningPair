@@ -2,18 +2,16 @@ Feature: User Login
 
   Scenario: User login valid details
     Given I visit the login page
-    When I type in "UNI" with "ab123"
-    And I type in "Password" with "123"
+    When I type in "UNI" with "hk3060"
+    And I type in "Password" with "12"
     And I click "Login"
-	Then I should see heading "Welcome to CUDiningPair"
-	And I click "Log Out"
-	Then I should be in the login page
+	  Then I should visit welcome page
 
   Scenario: User login with invalid details
     Given I visit the login page
     When I type in "UNI" with "ab123"
     And I type in "Password" with "123"
     And I click "Login"
-	Then I should not see heading "Welcome to CUDiningPair"
+    Then I see the error message "Invalid email/password combination"
     
   
