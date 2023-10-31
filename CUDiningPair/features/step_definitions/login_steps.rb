@@ -10,14 +10,14 @@ When /^(?:|I )click "([^"]*)"$/ do |button|
     click_button(button)
 end
 
-Then /^(?:|I )should see heading "([^"]*)"$/ do |heading_text|
-	expect(page).to have_selector('h1', text: heading_text)
+Then('I Log Out') do
+	click_button('.btn.btn-primary', text: 'Log Out')
 end
 
-Then /^(?:|I )should not see heading "([^"]*)"$/ do |heading_text|
-	expect(page).not_to have_selector('h1', text: heading_text)
+Then('I should visit welcome page') do
+	visit '/welcome/index'
 end
 
-Then('I should be in the login page') do
-	visit '/login'
-end 
+Then /^(?:|I )see the error message "([^"]*)"$/ do |flash_message|
+    expect(page).to have_content(flash_message)
+end
