@@ -12,7 +12,12 @@ class RegistrationsController < ApplicationController
       flash.now[:error] = 'Passwords do not match!'
       render 'new' and return
     end
-    
+   
+    if params[:user][:uni] == ""
+      flash.now[:error] = 'Uni cannot be empty.'
+      render 'new' and return
+    end
+
     # Automatically set the email value
     @user.email = "#{@user.uni}@columbia.edu"
   
