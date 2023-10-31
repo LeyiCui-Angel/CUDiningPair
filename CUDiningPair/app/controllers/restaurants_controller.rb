@@ -15,14 +15,14 @@ class RestaurantsController < ApplicationController
       if params[:cuisine]
         @cuisine_to_show=params[:cuisine].keys
       else
-        @cuisine_to_show=[]
+        @cuisine_to_show=['Hot spicy','vege','not spicy']
       end
 
       #check if selected rating
       if params[:rating]
-        @rating_to_show=params[:rating]
+        @rating_to_show=params[:rating]       
       else
-        @rating_to_show=0
+        @rating_to_show='Any'
       end
 
       #check if pressed button or back from other pages
@@ -37,9 +37,12 @@ class RestaurantsController < ApplicationController
           @rating_to_show=session[:rating]
         end
       end
-
-      @restaurants = Restaurant.cuisine(@rating_to_show, @cuisine_to_show)
-
+      
+      if @rating_to_show =~ /\A\d+(\.\d+)?\z/
+        @restaurants = Restaurant.cuisine(@rating_to_show, @cuisine_to_show)
+      else
+        @restaurants = Restaurant.cuisine(1, @cuisine_to_show)
+      end
     end
   
     def new
