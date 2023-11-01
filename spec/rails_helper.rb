@@ -34,9 +34,7 @@ RSpec.configure do |config|
   # Add Factory Bot methods
   #Dir[Rails.root.join('spec/factories/**/*.rb')].each { |f| require f }
 
-  # Include the WelcomeHelpers in request specs
-  Dir[Rails.root.join('spec', 'helpers', '**', '*.rb')].each { |f| require f }
-  config.include WelcomeHelpers, type: :request
+
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
