@@ -26,9 +26,9 @@ group :development, :test do
 end
 
 group :test do
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', require: false
   gem 'cucumber-rails-training-wheels'
-  gem 'simplecov', :require => false
+  gem 'simplecov', require: false
   gem 'factory_bot_rails'
   gem 'database_cleaner', '1.4.1'
 end
