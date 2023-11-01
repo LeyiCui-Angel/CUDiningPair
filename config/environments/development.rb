@@ -50,12 +50,12 @@ Rails.application.configure do
   # Send email
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  address: ‘smtp.gmail.com’,
+  address: 'smtp.gmail.com',
   port: 587,
-  domain: ‘https://cudiningpair-1-9c6393863cd3.herokuapp.com’,
+  domain: 'https://cudiningpair-1-9c6393863cd3.herokuapp.com',
   user_name: 'cudiningpair@gmail.com',
   password: 'cskpcbfxmfruknwu',
-  authentication: ‘plain’,
+  authentication: 'plain',
   enable_starttls_auto:  true
 }
 end

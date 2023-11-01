@@ -79,10 +79,6 @@ GEM
     date (3.3.3)
     diff-lcs (1.5.0)
     docile (1.4.0)
-    dotenv (2.8.1)
-    dotenv-rails (2.8.1)
-      dotenv (= 2.8.1)
-      railties (>= 3.2)
     erubis (2.7.0)
     execjs (2.9.1)
     factory_bot (5.2.0)
@@ -136,7 +132,7 @@ GEM
       racc (~> 1.4)
     pg (0.21.0)
     public_suffix (5.0.3)
-    racc (1.7.1)
+    racc (1.7.2)
     rack (1.6.13)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -159,6 +155,8 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.5.0)
       loofah (~> 2.19, >= 2.19.1)
+    rails-ujs (0.1.0)
+      railties (>= 3.1)
     railties (4.2.10)
       actionpack (= 4.2.10)
       activesupport (= 4.2.10)
@@ -232,7 +230,6 @@ DEPENDENCIES
   cucumber-rails
   cucumber-rails-training-wheels
   database_cleaner (= 1.4.1)
-  dotenv-rails
   factory_bot_rails
   faker
   jquery-rails
@@ -240,6 +237,7 @@ DEPENDENCIES
   letter_opener
   pg (~> 0.21)
   rails (= 4.2.10)
+  rails-ujs
   rspec-rails (= 3.7.2)
   sass-rails (~> 5.0.3)
   simplecov

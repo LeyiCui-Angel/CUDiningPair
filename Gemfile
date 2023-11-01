@@ -11,7 +11,8 @@ gem 'bcrypt'
 # for user registration code
 gem 'letter_opener'
 
-#gem 'sqlite3', '1.3.11'
+# For local deployment: comment out if deploying to Heroku
+gem 'sqlite3', '1.3.11'
 
 # for Heroku deployment 
 group :development, :test do
@@ -41,6 +42,8 @@ end
 gem 'sass-rails', '~> 5.0.3'
 gem 'uglifier', '>= 2.7.1'
 gem 'jquery-rails'
+#gem 'turbolinks'
+gem 'rails-ujs'
 
 # Manage 'secret' gmail password
-gem 'dotenv-rails', groups: [:development, :test]
+#gem 'dotenv-rails', groups: [:development, :test]
