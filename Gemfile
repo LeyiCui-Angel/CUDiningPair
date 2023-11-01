@@ -11,6 +11,9 @@ gem 'bcrypt'
 # for user registration code
 gem 'letter_opener'
 
+# For local deployment: comment out if deploying to Heroku
+gem 'sqlite3', '1.3.11'
+
 # for Heroku deployment 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
@@ -23,14 +26,14 @@ group :development, :test do
 end
 
 group :test do
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', require: false
   gem 'cucumber-rails-training-wheels'
-  gem 'simplecov', :require => false
+  gem 'simplecov', require: false
   gem 'factory_bot_rails'
   gem 'database_cleaner', '1.4.1'
 end
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.21'
 end
 
 # Gems used only for assets and not required
@@ -39,6 +42,8 @@ end
 gem 'sass-rails', '~> 5.0.3'
 gem 'uglifier', '>= 2.7.1'
 gem 'jquery-rails'
+#gem 'turbolinks'
+gem 'rails-ujs'
 
 # Manage 'secret' gmail password
-gem 'dotenv-rails', groups: [:development, :test]
+#gem 'dotenv-rails', groups: [:development, :test]

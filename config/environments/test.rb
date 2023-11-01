@@ -41,16 +41,17 @@ Rails.application.configure do
   config.assets.allow_debugging = true
 
     # Define default URL options for ActionMailer
-    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+    config.action_mailer.default_url_options = { host: 'https://cudiningpair-1-9c6393863cd3.herokuapp.com'}
   
     # Send email
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.smtp_settings = {
-      address: ENV['SMTP_ADDRESS'],
-      port: ENV['SMTP_PORT'].to_i,
-      user_name: ENV['SMTP_USER_NAME'],
-      password: ENV['SMTP_PASSWORD'],
-      authentication: ENV['SMTP_AUTHENTICATION'],
-      enable_starttls_auto: ENV['SMTP_STARTTLS'] == 'true'
-    }
+  #   config.action_mailer.delivery_method = :smtp
+  #   config.action_mailer.smtp_settings = {
+  #   address: ‘smtp.gmail.com’,
+  #   port: 587,
+  #   domain: ‘https://cudiningpair-1-9c6393863cd3.herokuapp.com’,
+  #   user_name: 'cudiningpair@gmail.com',
+  #   password: 'cskpcbfxmfruknwu',
+  #   authentication: ‘plain’,
+  #   enable_starttls_auto:  true
+  # }
 end
