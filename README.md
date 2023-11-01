@@ -1,7 +1,8 @@
 # CUDiningPair
 Group project for Engineering SaaS Fall 2023
 
-Github Link:
+### Github Link
+https://github.com/LeyiCui-Angel/CUDiningPair
 
 ## Team members
 Ha Yeon Kim (hk3060)
@@ -42,7 +43,6 @@ Currently for iteration1, we have three main functions: register, login, and fil
 6. Of course you can filter the restaurant with ratings and cuisine by simply click the corresponding button at top of the list.
 
 
-
 ## Instructions to test CUDiningPair
 Overall test coverage score: 94
 
@@ -51,5 +51,6 @@ Overall test coverage score: 94
 2. bundle install
 3. bundle exec rake db:migrate
 4. bundle exec rake db:seed
+(Skip step 1-4 if you've ran them before)
 5. bundle exec rake db:test:prepare
 6. bundle exec cucumber
