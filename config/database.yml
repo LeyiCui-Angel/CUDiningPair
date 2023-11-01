@@ -19,9 +19,11 @@ test: &test
   timeout: 5000
 
 production:
-  <<: *default
   adapter: postgresql
-  database: db/production.sqlite3
+  encoding: unicode
+  url: <%= ENV['DATABASE_URL'] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
 
 cucumber:
   <<: *test
