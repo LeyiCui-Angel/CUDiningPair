@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/sessions_controller.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/controllers/sessions_controller.rb": {
         "lines": [
           1,
           null,
@@ -31,7 +31,7 @@
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/application_controller.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/controllers/application_controller.rb": {
         "lines": [
           1,
           1,
@@ -60,19 +60,19 @@
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/helpers/application_helper.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/helpers/registrations_helper.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/helpers/registrations_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/helpers/restaurants_helper.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/helpers/restaurants_helper.rb": {
         "lines": [
           null,
           null,
@@ -90,25 +90,25 @@
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/helpers/sessions_helper.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/helpers/sessions_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/helpers/users_helper.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/helpers/users_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/helpers/welcome_helper.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/helpers/welcome_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/models/user.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/models/user.rb": {
         "lines": [
           1,
           1,
@@ -130,17 +130,18 @@
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/models/application_record.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/models/application_record.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/registrations_controller.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/controllers/registrations_controller.rb": {
         "lines": [
           1,
           null,
+          1,
           1,
           null,
           1,
@@ -177,13 +178,17 @@
           null,
           null,
           1,
-          0,
-          0,
+          3,
+          3,
           0,
           0,
           null,
-          0,
-          0,
+          3,
+          3,
+          null,
+          null,
+          null,
+          1,
           null,
           null,
           null,
@@ -197,7 +202,7 @@
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/mailers/user_mailer.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/mailers/user_mailer.rb": {
         "lines": [
           1,
           1,
@@ -210,7 +215,7 @@
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/mailers/application_mailer.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/mailers/application_mailer.rb": {
         "lines": [
           1,
           1,
@@ -218,7 +223,7 @@
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/models/restaurant.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/models/restaurant.rb": {
         "lines": [
           1,
           null,
@@ -233,13 +238,14 @@
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/restaurants_controller.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/controllers/restaurants_controller.rb": {
         "lines": [
           1,
           null,
           1,
           0,
           0,
+          null,
           null,
           null,
           null,
@@ -318,7 +324,7 @@
           null
         ]
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/users_controller.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/controllers/users_controller.rb": {
         "lines": [
           0,
           0,
@@ -340,7 +346,7 @@
         "branches": {
         }
       },
-      "/Users/angelcui/Documents/GitHub/CUDiningPair/CUDiningPair/app/controllers/welcome_controller.rb": {
+      "/Users/angelcui/Documents/GitHub/CUDiningPair/app/controllers/welcome_controller.rb": {
         "lines": [
           0,
           0,
@@ -353,7 +359,7 @@
         }
       }
     },
-    "timestamp": 1698799077
+    "timestamp": 1698865603
   },
   "RSpec": {
     "coverage": {

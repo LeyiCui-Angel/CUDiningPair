@@ -6,6 +6,7 @@ class RestaurantsController < ApplicationController
       # Will render app/views/restaurants/show.<extension> by default
     end
   
+    
     def index
 
       selected_rating = params[:rating]
