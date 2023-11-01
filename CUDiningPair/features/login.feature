@@ -2,10 +2,10 @@ Feature: User Login
 
   Scenario: User login valid details
     Given I visit the login page
-    When I type in "UNI" with "hk3060"
-    And I type in "Password" with "12"
+    When I type in "UNI" with "ab123"
+    And I type in "Password" with "ab123"
     And I click "Login"
-	  Then I should visit welcome page
+	  Then I should see "This is the landing page"
 
   Scenario: User login with invalid details
     Given I visit the login page

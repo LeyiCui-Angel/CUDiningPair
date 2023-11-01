@@ -10,12 +10,12 @@ When /^(?:|I )click "([^"]*)"$/ do |button|
     click_button(button)
 end
 
-Then('I Log Out') do
-	click_button('.btn.btn-primary', text: 'Log Out')
-end
-
-Then('I should visit welcome page') do
-	visit '/welcome/index'
+Then /^(?:|I )should see "([^"]*)"$/ do |text|
+  if page.respond_to? :should
+    page.should have_content(text)
+  else
+    assert page.has_content?(text)
+  end
 end
 
 Then /^(?:|I )see the error message "([^"]*)"$/ do |flash_message|
