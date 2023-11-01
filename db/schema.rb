@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20231029064529) do
+ActiveRecord::Schema.define(version: 20231101072337) do
 
   create_table "restaurants", force: :cascade do |t|
     t.decimal "custom_id"
@@ -24,17 +24,15 @@ ActiveRecord::Schema.define(version: 20231029064529) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.string   "email",              null: false
-    t.string   "encrypted_password"
+    t.string   "email",             null: false
+    t.string   "uni",               null: false
     t.datetime "verified_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "verification_code"
-    t.string   "uni"
     t.string   "password_digest"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["uni"], name: "index_users_on_uni", unique: true
 
 end
