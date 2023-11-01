@@ -7,7 +7,11 @@ Qijian Zhang (qz2507)
 Zining Yin (zy2605)
 Leyi Cui (lc3542)
 
-## Instructions to run and test CUDiningPair
+## Instructions to run CUDiningPair
+Heorku link:
+
+https://cudiningpair-1-9c6393863cd3.herokuapp.com/
+
 Currently for iteration1, we have three main functions: register, login, and filter restaurant information.
 
 1. First loading the app, you will be directed to the login page. There, you can click “Sign up here” and move on to the registration page.(assuming that you don't have an account already).
@@ -24,7 +28,7 @@ Currently for iteration1, we have three main functions: register, login, and fil
 
 
 
-## Test instruction for our CUDining Pair
+## Instructions to test CUDiningPair
 We write done the tests for testing our app with an overall test coverage of 94 on Heroku.
 
 We have cucumber to test our code only, so just run the cucumber related function for testing the app.
