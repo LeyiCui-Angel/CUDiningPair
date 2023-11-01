@@ -10,25 +10,38 @@ class RestaurantsController < ApplicationController
 
       selected_rating = params[:rating]
       selected_cuisine = params[:cuisine]
-      if selected_cuisine.present?
-        @cuisine_to_show=selected_cuisine.keys
+
+      #check if selected cuisine
+      if params[:cuisine]
+        @cuisine_to_show=params[:cuisine].keys
       else
-        @cuisine_to_show=[]
+        @cuisine_to_show=['Hot spicy','vege','not spicy']
       end
+
+      #check if selected rating
+      if params[:rating]
+        @rating_to_show=params[:rating]       
+      else
+        @rating_to_show='Any'
+      end
+
+      #check if pressed button or back from other pages
       if params[:commit]
         session[:cuisine]=@cuisine_to_show
+        session[:rating]=@rating_to_show
       else
-        @cuisine_to_show=session[:cuisine]
+        if session[:cuisine]
+          @cuisine_to_show=session[:cuisine]
+        end
+        if session[:rating]
+          @rating_to_show=session[:rating]
+        end
       end
-      # Initialize @restaurants with all restaurants
-      @restaurants = Restaurant.all
-
-      if selected_rating.present? && selected_cuisine.present?
-        @restaurants = Restaurant.cuisine(selected_rating, @cuisine_to_show)
-      elsif selected_rating.present?
-        @restaurants = Restaurant.where("rating >= ?", selected_rating)
-      elsif selected_cuisine.present?
-        @restaurants = Restaurant.cuisine(0, @cuisine_to_show)
+      
+      if @rating_to_show =~ /\A\d+(\.\d+)?\z/
+        @restaurants = Restaurant.cuisine(@rating_to_show, @cuisine_to_show)
+      else
+        @restaurants = Restaurant.cuisine(1, @cuisine_to_show)
       end
     end
   

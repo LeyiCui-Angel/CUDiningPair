@@ -1,3 +1,15 @@
+<% if flash[:notice] %>
+  <% if @show_mainpage_link %>
+    <%= link_to 'Access Mainpage', welcome_index_path, class: 'mainpage-link' %>
+  <% end %>
+<% end %>
+
+<% if flash.now[:danger] %>
+  <div class="alert alert-danger">
+    <%= flash.now[:danger] %>
+  </div>
+<% end %>
+
 <%= form_for :session, url: sessions_path do |f| %>
     <div class="field">
       <%= f.label :uni, "UNI" %><br>
@@ -13,8 +25,4 @@
 <% end %>
 
 <p>Not registered? <%= link_to 'Sign up here', signup_path %></p>
-
-<% flash.each do |message_type, message| %>
-  <div class="alert alert-<%= message_type %>"><%= message %></div>
-<% end %>
   
