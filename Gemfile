@@ -30,7 +30,7 @@ group :test do
   gem 'database_cleaner', '1.4.1'
 end
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.21'
 end
 
 # Gems used only for assets and not required
