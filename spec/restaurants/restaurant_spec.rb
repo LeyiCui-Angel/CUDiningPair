@@ -40,35 +40,5 @@ RSpec.describe Restaurant, type: :model do
   end
 end
 
-# spec/controllers/restaurants_controller_spec.rb
-require 'rails_helper'
 
-RSpec.describe RestaurantsController, type: :controller do
-  describe "GET #index" do
-    it "returns a successful response" do
-      get :index
-      expect(response).to have_http_status(:success)
-    end
-
-    # Existing tests for the "index" action
-
-    it "displays the cuisine filter options" do
-      # Add a test to check if the cuisine filter options are displayed correctly
-      get :index
-      expect(response.body).to include("Hot Spicy")
-      expect(response.body).to include("Vege")
-      expect(response.body).to include("Not Spicy")
-    end
-  end
-
-  describe "POST #create" do
-    it "creates a new restaurant with cuisine" do
-      # Add a test to check if a new restaurant with cuisine is created successfully
-      post :create, params: { restaurant: { name: "New Restaurant", location: "New Location", rating: 4, cuisine: "Hot Spicy" } }
-      expect(Restaurant.last.cuisine).to eq("Hot Spicy")
-    end
-
-    # Existing tests for the "create" action
-  end
-end
 

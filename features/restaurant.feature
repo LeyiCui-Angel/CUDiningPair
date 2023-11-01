@@ -8,12 +8,23 @@ Background: restaurants in database
   | Restaurant B |   3.8  | vege         | 456 Elm St    |
   | Restaurant C |   4.2  | not spicy    | 789 Oak St    |
 
-  #Given I logged in
+  Given I visit the signup page
+    When I fill in "UNI" with "user12345"
+    And I fill in "Password" with "password123"
+    And I fill in "Password confirmation" with "password123"
+    And I press "Sign up"
+    Given I visit the login page
+    When I fill in "UNI" with "user12345"
+    And I fill in "Password" with "password123"
+    And I press "Login"
+	  Then I should be on the welcome page
+
+    
 
 Scenario: edit restaurant 
     #Given I logged in 
     #Given I am on the welcome page
-    # Then I should see "Restaurant"
+    #Then I should see "Restaurant"
     Given I am on the restaurants page
     Then I should see "More about Restaurant A"
     When I click "More about Restaurant A"
@@ -73,3 +84,4 @@ Scenario: cancel changes
   Then I click "Edit"
   Then I click "Cancel"
   Then I should see "All Restaurants"
+  

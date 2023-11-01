@@ -22,7 +22,7 @@ class RegistrationsController < ApplicationController
     # Automatically set the email value
     @user.email = "#{@user.uni}@columbia.edu"
   
-    @user.verification_code = rand.to_s[2..7]  # Generate a 6-digit random number
+    #@user.verification_code = rand.to_s[2..7]  # Generate a 6-digit random number
     
     if @user.save
       # UserMailer.send_verification_code(@user, @user.verification_code).deliver_now
@@ -37,19 +37,19 @@ class RegistrationsController < ApplicationController
     end
   end  
   
-  def check_verification
-    user = User.find_by(verification_code: params[:registration][:verification_code])
-    if user
-      user.update(verified_at: Time.now)
-      redirect_to login_path
-    else
-      flash.now[:error] = 'Invalid verification code. Please try again.'
-      render :verify
-    end
-  end
+#   def check_verification
+#     user = User.find_by(verification_code: params[:registration][:verification_code])
+#     if user
+#       user.update(verified_at: Time.now)
+#       redirect_to login_path
+#     else
+#       flash.now[:error] = 'Invalid verification code. Please try again.'
+#       render :verify
+#     end
+#   end
 
-  def verify
-  end
+#   def verify
+#   end
   
   
   

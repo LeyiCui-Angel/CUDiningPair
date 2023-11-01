@@ -12,6 +12,10 @@ Then ('I should be on the welcome page') do
     # expect(page).to have_content('Welcome')
 end
 
+Then ('I should be back on the signup page') do
+    expect(current_path).to eq(signup_path)
+end
+
 Then /^(?:|I )should see label "([^"]*)"$/ do |text|
     label = find('label', text: label_text)
     expect(label).to be_visible
@@ -20,4 +24,4 @@ end
 Then /^(?:|I )should see flash message "([^"]*)"$/ do |flash_message|
     expect(page).to have_content(flash_message)
 end
-  
+
