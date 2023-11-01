@@ -9,8 +9,10 @@ require File.expand_path('../boot', __FILE__)
 # require "rails/test_unit/railtie"
 require "rails/all"
 
-require 'dotenv'
-Dotenv.load
+if ['development', 'test'].include?(ENV['RAILS_ENV'])
+  require 'dotenv'
+  Dotenv.load
+end
 
 Bundler.require(:default, Rails.env)
 
