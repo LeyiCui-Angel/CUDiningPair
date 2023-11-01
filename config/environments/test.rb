@@ -44,14 +44,14 @@ Rails.application.configure do
     config.action_mailer.default_url_options = { host: 'https://cudiningpair-1-9c6393863cd3.herokuapp.com'}
   
     # Send email
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.smtp_settings = {
-    address: ‘smtp.gmail.com’,
-    port: 587,
-    domain: ‘https://cudiningpair-1-9c6393863cd3.herokuapp.com’,
-    user_name: 'cudiningpair@gmail.com',
-    password: 'cskpcbfxmfruknwu',
-    authentication: ‘plain’,
-    enable_starttls_auto:  true
-  }
+  #   config.action_mailer.delivery_method = :smtp
+  #   config.action_mailer.smtp_settings = {
+  #   address: ‘smtp.gmail.com’,
+  #   port: 587,
+  #   domain: ‘https://cudiningpair-1-9c6393863cd3.herokuapp.com’,
+  #   user_name: 'cudiningpair@gmail.com',
+  #   password: 'cskpcbfxmfruknwu',
+  #   authentication: ‘plain’,
+  #   enable_starttls_auto:  true
+  # }
 end
