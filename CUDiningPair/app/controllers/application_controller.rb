@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   def require_login
     unless logged_in?
-      flash[:alert] = "You must be logged in to access this section"
+      flash[:danger] = "You must be logged in to access CUDiningPair."
       redirect_to login_path # Redirects to the login path if not logged in
     end
   end

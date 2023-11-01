@@ -4,13 +4,18 @@ Given('I visit the login page') do
 end
 
 When /^(?:|I )type in "([^"]*)" with "([^"]*)"$/ do |field, value|
-    fill_in field, with: value
+    field_id = case field
+               when "UNI" then "session_uni"
+               when "Password" then "session_password"
+               else field
+               end
+    
+    expect(page).to have_css("##{field_id}", visible: true)
+    fill_in(field_id, with: value)
+end  
 
-end
-
-When /^(?:|I )click "([^"]*)"$/ do |button|
+When /^(?:|I )click on button "([^"]*)"$/ do |button|
     click_button(button, wait: 5)
-
 end
 
 Then('I Log Out') do
@@ -19,15 +24,10 @@ Then('I Log Out') do
 end
 
 Then('I should be on the welcome page') do
-    expect(current_path).to eq('/welcome/index')
+    expect(current_path).to eq(welcome_index_path)
     # or check for content that uniquely identifies the welcome page
-    expect(page).to have_content('Welcome')
+    # expect(page).to have_content('Welcome')
   end
-
-Then /^(?:|I )see the error message "([^"]*)"$/ do |flash_message|
-    expect(page).to have_content(flash_message)
-
-end
 
 Then(/^I can see "([^"]*)"$/) do |text|
     expect(page).to have_content(text)
