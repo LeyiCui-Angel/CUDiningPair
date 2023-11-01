@@ -11,7 +11,8 @@ gem 'bcrypt'
 # for user registration code
 gem 'letter_opener'
 
-gem 'sqlite3', '1.3.11'
+#gem 'sqlite3', '1.3.11'
+
 # for Heroku deployment 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
