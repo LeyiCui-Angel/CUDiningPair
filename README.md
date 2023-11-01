@@ -25,8 +25,8 @@ Currently for iteration1, we have three main functions: register, login, and fil
 
 
 ## Test instruction for our CUDining Pair
-We write done the tests for testing our app with an overall test coverage of ??? on Heroku.
+We write done the tests for testing our app with an overall test coverage of 94 on Heroku.
 
-In order to test our app, you can run code below:
+We have cucumber to test our code only, so just run the cucumber related function for testing the app.
 
 
