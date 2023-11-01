@@ -6,4 +6,8 @@
     <%= f.label :verification_code, "Verification Code" %>
     <%= f.text_field :verification_code %>
     <%= f.submit "Verify" %>
-<% end %>  
+<% end %>
+  
+<% if flash[:error].present? %>
+  <div class="alert alert-danger"><%= flash[:error] %></div>
+<% end %>

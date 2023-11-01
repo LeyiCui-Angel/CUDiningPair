@@ -9,7 +9,7 @@
           <%= link_to "UNI: #{current_user.uni}", user_path(current_user), class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Log Out', logout_path, method: :delete, class: 'nav-link' %>
+          <%= button_to 'Log Out', logout_path, method: :delete, class: 'nav-link', class: 'btn btn-primary' %>
         </li>
       </ul>
     </div>
