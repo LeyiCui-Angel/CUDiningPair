@@ -1,6 +1,7 @@
 class RegistrationsController < ApplicationController
   # redirect if logged in
-  skip_before_action :require_login, only: [:new, :create, :verify]
+  skip_before_action :require_login, only: [:new, :create, :check_verification, :verify]
+  helper_method :current_user
 
   def new
   end
@@ -35,22 +36,26 @@ class RegistrationsController < ApplicationController
     end
   end  
   
-  def verify
-    user = User.find_by(verification_code: params[:verification_code])
+  def check_verification
+    user = User.find_by(verification_code: params[:registration][:verification_code])
     if user
-      user.update(is_verified: true)
-      redirect_to new_sessions_path, notice: 'User verified!'
+      user.update(verified_at: Time.now)
+      redirect_to login_path
     else
-      flash.now[:alert] = 'Invalid verification code. Please try again.'
+      flash.now[:error] = 'Invalid verification code. Please try again.'
       render :verify
     end
   end
+
+  def verify
+  end
+  
   
   
   private
   
   def user_params
-    params.require(:user).permit(:uni, :password, :password_confirmation)
+    params.require(:user).permit(:uni, :password, :password_confirmation, :verification_code)
   end  
   
 end
