@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy', as: 'logout'
 
   # Verification routes (assumes one to show form, another to submit)
-  # get 'verification', to: 'registrations#verify', as: 'verification'
-  # post 'verification', to: 'registrations#check_verification', as: 'check_verification'
+  get 'verification', to: 'registrations#verify', as: 'verification'
+  post 'verification', to: 'registrations#check_verification', as: 'check_verification'
   
   # User profile route
   resources :users, only: [:show] # Assumes a show action for a user's profile page

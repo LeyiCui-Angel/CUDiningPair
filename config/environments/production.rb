@@ -1,5 +1,18 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb
+  config.action_mailer.default_url_options = {host: "https://cudiningpair-1-9c6393863cd3.herokuapp.com", protocol: "https"}
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:         'smtp.gmail.com',
+    port:            587,
+    domain:          'https://cudiningpair-1-9c6393863cd3.herokuapp.com',
+    user_name:       'cudiningpair@gmail.com',
+    password:        'cskpcbfxmfruknwu',
+    authentication:  'plain',
+    enable_starttls: true,
+    open_timeout:    5,
+    read_timeout:    5 }
 
   # Code is not reloaded between requests
   config.cache_classes = true
@@ -49,7 +62,7 @@ Rails.application.configure do
   # config.assets.precompile += %w( search.js )
 
   # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
+  # config.action_mailer.y_errors = false
 
   # Enable threaded mode
   # config.threadsafe!
