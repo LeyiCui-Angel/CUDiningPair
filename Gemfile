@@ -12,7 +12,7 @@ gem 'bcrypt'
 gem 'letter_opener'
 
 # For local deployment: comment out if deploying to Heroku
-gem 'sqlite3', '1.3.11'
+#gem 'sqlite3', '1.3.11'
 
 # for Heroku deployment 
 group :development, :test do

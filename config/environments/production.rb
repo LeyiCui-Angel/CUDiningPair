@@ -18,7 +18,6 @@ Rails.application.configure do
   config.assets.js_compressor = :uglifier
 
   # DO fallback to assets pipeline if a precompiled asset is missed
-  # Change to true if using Heroku?
   config.assets.compile = true
 
   # Generate digests for assets URLs

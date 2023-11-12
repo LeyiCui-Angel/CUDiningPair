@@ -1,5 +1,8 @@
 # CUDiningPair
-Group project for Engineering SaaS
+Group project for Engineering SaaS Fall 2023
+
+### Github Link
+https://github.com/LeyiCui-Angel/CUDiningPair
 
 ## Team members
 Ha Yeon Kim (hk3060)
@@ -7,7 +10,24 @@ Qijian Zhang (qz2507)
 Zining Yin (zy2605)
 Leyi Cui (lc3542)
 
-## Instructions to run and test CUDiningPair
+## Instructions to run CUDiningPair
+
+### Heroku Link
+https://cudiningpair-1-9c6393863cd3.herokuapp.com/
+
+### Run locally
+1. Clone the repo
+2. bundle install
+3. bundle exec rake db:migrate
+4. bundle exec rake db:seed
+5. rails server
+6. open 'localhost:3000'
+
+Available credentials in seed db for login:
+UNI: ab123
+Password: ab123
+
+### Functions
 Currently for iteration1, we have three main functions: register, login, and filter restaurant information.
 
 1. First loading the app, you will be directed to the login page. There, you can click “Sign up here” and move on to the registration page.(assuming that you don't have an account already).
@@ -23,10 +43,14 @@ Currently for iteration1, we have three main functions: register, login, and fil
 6. Of course you can filter the restaurant with ratings and cuisine by simply click the corresponding button at top of the list.
 
 
+## Instructions to test CUDiningPair
+Overall test coverage score: 94
 
-## Test instruction for our CUDining Pair
-We write done the tests for testing our app with an overall test coverage of 94 on Heroku.
-
-We have cucumber to test our code only, so just run the cucumber related function for testing the app.
-
-
+### Test locally
+1. Clone the repo
+2. bundle install
+3. bundle exec rake db:migrate
+4. bundle exec rake db:seed
+(Skip step 1-4 if you've ran them before)
+5. bundle exec rake db:test:prepare
+6. bundle exec cucumber
