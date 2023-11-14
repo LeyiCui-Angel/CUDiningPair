@@ -12,10 +12,8 @@ class UsersController < ApplicationController
 
     def update
       @user = User.find(params[:id])
-      @user.update_attributes(name: params[:name], gender: params[:gender], mbti: params[:mbti])
-      @user.update_attribute(:uni, params[:uni]) if params[:uni].present?
       
-      if @user
+      if @user.update(user_params)
         flash[:notice] = "#{@user.name} was successfully updated."
         redirect_to user_path(@user)
       else
