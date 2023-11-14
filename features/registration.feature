@@ -11,6 +11,19 @@ Feature: User Registration and login
     And I fill in "Password" with "password123"
     And I press "Login"
 	  Then I should be on the welcome page
+    When I click "UNI: user12345"
+    Then I should see "User Profile"
+    When I click "Back to Welcome Page"
+    Then I should be on the welcome page
+    Then I should see "User Profile" 
+    When I click "UNI: user12345"
+    Then I should see "User Profile"
+    When I click "Edit user information"
+    Then I should see "Edit User Information"
+    When I click "Cancel"
+    Then I should see "User Profile"
+    When I click "Back to Welcome Page"
+    Then I should be on the welcome page
 
 
   Scenario: User registers with valid details but failed logging in

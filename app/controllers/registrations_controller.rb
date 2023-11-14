@@ -25,8 +25,9 @@ class RegistrationsController < ApplicationController
     @user.verification_code = rand.to_s[2..7]  # Generate a 6-digit random number
     
     if @user.save
-      UserMailer.send_verification_code(@user, @user.verification_code).deliver_now
-      redirect_to verification_path
+      # UserMailer.send_verification_code(@user, @user.verification_code).deliver_now
+      # redirect_to verification_path
+      redirect_to login_path
     else
       # Check if the 'uni' attribute has any errors
       if @user.errors.added?(:uni, :taken)
