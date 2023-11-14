@@ -1,5 +1,7 @@
 <h1>User Profile</h1>
 <p>Name: <%= @user.name %></p>
 <p>Email: <%= @user.email %></p>
-<p>UNI: <%= @user.uni %></p>
+<p>Gender: <%= @user.gender %></p>
+<p>MBTI: <%= @user.mbti %></p>
+<%= link_to 'Edit user information', edit_user_path(@user), class: 'btn btn-primary' %>
 <!-- Add more user attributes as needed -->

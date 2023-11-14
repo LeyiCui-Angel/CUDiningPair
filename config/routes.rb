@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   post 'verification', to: 'registrations#check_verification', as: 'check_verification'
   
   # User profile route
-  resources :users, only: [:show] # Assumes a show action for a user's profile page
+  resources :users
 
   # Merge the 'restaurants' route here
   resources :restaurants
