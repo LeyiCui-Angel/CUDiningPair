@@ -13,6 +13,20 @@
 
 ActiveRecord::Schema.define(version: 20231113142754) do
 
+  create_table "pairings", force: :cascade do |t|
+    t.integer  "restaurant_id",            null: false
+    t.integer  "target_number_of_people"
+    t.integer  "current_number_of_people"
+    t.datetime "meeting_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pairings_users", id: false, force: :cascade do |t|
+    t.integer "pairing_id"
+    t.integer "user_id"
+  end
+
   create_table "restaurants", force: :cascade do |t|
     t.decimal "custom_id"
     t.string  "name"
