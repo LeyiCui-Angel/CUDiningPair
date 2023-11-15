@@ -73,6 +73,7 @@ class RestaurantsController < ApplicationController
       flash[:notice] = "Restaurant '#{@restaurant.name}' deleted."
       redirect_to restaurants_path
     end
+    
   
     private
     def restaurant_params
