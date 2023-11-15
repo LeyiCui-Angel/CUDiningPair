@@ -1,0 +1,36 @@
+<!-- app/views/pairings/show.html.erb -->
+<h2>Details about this Pairing</h2>
+
+<ul id="details">
+  <li>
+    Restaurant:
+    <%= @pairing.restaurant.name %>
+  </li>
+  <li>
+    Target Number of People:
+    <%= number_with_delimiter(@pairing.target_number_of_people) %>
+  </li>
+  <li>
+    Current Number of People:
+    <%= number_with_delimiter(@pairing.current_number_of_people) %>
+  </li>
+  <li>
+    Users joined:
+    <ul>
+      <% @pairing.users.each do |user| %>
+        <li><%= user.name %> (Uni: <%= user.uni %>)</li>
+      <% end %>
+    </ul>
+  </li>
+</ul>
+
+<div class="row">
+  <%= link_to 'Edit', edit_pairing_path(@pairing), class: 'btn btn-primary col-2' %>
+
+  <%= link_to 'Back to pairings list', pairings_path, class: 'btn btn-primary col-2' %>
+  <% if @pairing.current_number_of_people < @pairing.target_number_of_people %>
+
+  <% else %>
+    <p class="text-danger">This pairing is full and cannot be joined.</p>
+  <% end %>
+</div>
