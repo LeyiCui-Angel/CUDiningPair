@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(version: 20231113142754) do
     t.datetime "updated_at"
     t.string   "verification_code"
     t.string   "password_digest"
-    t.string   "gender"
-    t.string   "mbti"
+    t.integer  "gender"
+    t.integer  "mbti"
   end
 
   add_index "users", ["uni"], name: "index_users_on_uni", unique: true
