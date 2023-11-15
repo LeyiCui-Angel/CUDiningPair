@@ -1,5 +1,5 @@
 class AddMbitiToUsers < ActiveRecord::Migration
   def change
-    add_column :users, :mbti, :string
+    add_column :users, :mbti, :int
   end
 end
