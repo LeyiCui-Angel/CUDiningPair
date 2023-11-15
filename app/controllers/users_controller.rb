@@ -6,6 +6,7 @@ class UsersController < ApplicationController
       @user = User.find(id)
     end
 
+        
     def index
 
     end
