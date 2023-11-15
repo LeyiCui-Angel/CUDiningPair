@@ -23,6 +23,13 @@ Rails.application.routes.draw do
   resources :restaurants
   
   # Any additional routes can go here...
+  resources :pairings 
+  get 'pairings/:id/join', to: 'pairings#join', as: 'join_pairing'
+
+  
+  
+  
+
 end
 
 
