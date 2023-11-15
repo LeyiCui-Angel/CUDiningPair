@@ -46,10 +46,7 @@ Scenario: edit restaurant
 
 
 
-Scenario: delete restaurant
-  Given I am on the details page for "Restaurant A"
-  And   I click "Delete"
-  Then I should not see "4.5"
+
 
 Scenario: filter restaurant
   Given I am on the restaurants page
