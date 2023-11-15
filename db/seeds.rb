@@ -36,7 +36,6 @@ restaurants = [
 restaurants.each do |restaurant|
   Restaurant.create!(restaurant)
 end
-
 restaurant1 = Restaurant.create(custom_id: 3, name: 'Restaurant1', location: '789 Oak St', rating: 4.2,ratingcount: 45 , cuisine: 'not spicy')
 restaurant2 = Restaurant.create(custom_id: 3, name: 'Restaurant2', location: '789 Oak St', rating: 4.2,ratingcount: 45 , cuisine: 'not spicy')
 
