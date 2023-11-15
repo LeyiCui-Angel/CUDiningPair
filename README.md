@@ -53,6 +53,7 @@ Currently for iteration2, we added two functions: edit user profile and initiate
 
 11. You cannot enter the same pairing twice but you can enter different pairings as many as you want. Once the pairing is full, user cannot join this specific pairing anymore.
 
+12. If you want to know more info about pairing, you can click that corresponding button and see who is inside of this pairing. You can also edit the info if you would like to.
 
 ## Instructions to test CUDiningPair
 Overall test coverage score: 91.84
