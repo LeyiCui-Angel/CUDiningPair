@@ -28,7 +28,7 @@ UNI: ab123
 Password: ab123
 
 ### Functions
-Currently for iteration1, we have three main functions: register, login, and filter restaurant information.
+Currently for iteration2, we added two functions: edit user profile and __.
 
 1. First loading the app, you will be directed to the login page. There, you can click “Sign up here” and move on to the registration page.(assuming that you don't have an account already).
 
@@ -36,7 +36,11 @@ Currently for iteration1, we have three main functions: register, login, and fil
 
 3. Successfully verified user will be redirected to the login page. To start using our app, you can login. If you already have an account with our app, simply log in.
 
-4. After logging in user will be on welcome page where they can click “restaurant” to move onto restaurant information. In restaurant page, user can add restaurant data and filter their view.
+4. After logging in user will be on welcome page. On the right top corner you can click "UNI: your_uni" where you can edit user profile.
+
+5. There you can edit name, gender, and mbti. More options will be added later.
+
+6. [start explain restaurant new function]they can click “restaurant” to move onto restaurant information. In restaurant page, user can add restaurant data and filter their view.
 
 5. You can see name, location, rating for each of the uploaded restaurant in the list together with the restaurant's cuisine, like hot spicy or not.
 
