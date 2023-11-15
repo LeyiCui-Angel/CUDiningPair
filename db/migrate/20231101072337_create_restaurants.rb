@@ -7,7 +7,6 @@ class CreateRestaurants < ActiveRecord::Migration
       t.decimal :rating, precision: 3, scale: 1
       t.decimal :ratingcount
       t.string :cuisine
-      has_many :restaurant_user_pairings
     end
   end
 
