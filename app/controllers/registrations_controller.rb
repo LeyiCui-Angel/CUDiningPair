@@ -37,16 +37,16 @@ class RegistrationsController < ApplicationController
     end
   end  
   
-  def check_verification
-    user = User.find_by(verification_code: params[:registration][:verification_code])
-    if user
-      user.update(verified_at: Time.now)
-      redirect_to login_path
-    else
-      flash.now[:error] = 'Invalid verification code. Please try again.'
-      render :verify
-    end
-  end
+  # def check_verification
+  #   user = User.find_by(verification_code: params[:registration][:verification_code])
+  #   if user
+  #     user.update(verified_at: Time.now)
+  #     redirect_to login_path
+  #   else
+  #     flash.now[:error] = 'Invalid verification code. Please try again.'
+  #     render :verify
+  #   end
+  # end
 
   def verify
   end
