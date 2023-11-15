@@ -64,9 +64,7 @@ Scenario: pairings page check
     Then I should see "Pairing was successfully updated"
     And I click "Back to pairings list"
     Then I should see "Full"
-    And I click "More about this pairing"
-    And I press "Delete"
-    Then I should see "No pairings available"
+
 
 
 

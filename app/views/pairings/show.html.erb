@@ -26,7 +26,7 @@
 
 <div class="row">
   <%= link_to 'Edit', edit_pairing_path(@pairing), class: 'btn btn-primary col-2' %>
-<%= button_to 'Delete', pairing_path(@pairing), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-lg' %>
+
   <%= link_to 'Back to pairings list', pairings_path, class: 'btn btn-primary col-2' %>
   <% if @pairing.current_number_of_people < @pairing.target_number_of_people %>
 

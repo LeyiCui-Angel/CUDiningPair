@@ -35,12 +35,12 @@ class PairingsController < ApplicationController
     redirect_to pairing_path(@pairing)
   end
 
-  def destroy
-    @pairing = Pairing.find(params[:id])
-    @pairing.destroy
-    flash[:notice] = "Restaurant Pairing deleted."
-    redirect_to pairings_path
-  end
+  # def destroy
+  #   @pairing = Pairing.find(params[:id])
+  #   @pairing.destroy
+  #   flash[:notice] = "Restaurant Pairing deleted."
+  #   redirect_to pairings_path
+  # end
 
   def join
     @pairing = Pairing.find(params[:id])
