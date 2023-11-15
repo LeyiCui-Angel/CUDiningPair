@@ -1,5 +1,5 @@
 class Restaurant < ActiveRecord::Base
-
+  has_many :pairings
     
     def self.cuisine(rating, cuisine_list)
         restaurants=[]
