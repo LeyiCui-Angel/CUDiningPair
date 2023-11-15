@@ -3,7 +3,7 @@ require 'faker'
 require 'securerandom'
 
 # Create a specific user who has been verified
-User.create!(
+user1=User.create!(
     name: 'Angel Baez',
     uni: 'ab123',
     email: 'ab123@columbia.edu',
@@ -15,7 +15,7 @@ User.create!(
 )
 
 # Create a specific user who hasn't been verified
-User.create!(
+user2=User.create!(
   name: 'Charlie Doe',
   uni: 'cd456',
   email: 'cd456@columbia.edu',
@@ -36,3 +36,9 @@ restaurants = [
 restaurants.each do |restaurant|
   Restaurant.create!(restaurant)
 end
+
+restaurant1 = Restaurant.create(custom_id: 3, name: 'Restaurant1', location: '789 Oak St', rating: 4.2,ratingcount: 45 , cuisine: 'not spicy')
+restaurant2 = Restaurant.create(custom_id: 3, name: 'Restaurant2', location: '789 Oak St', rating: 4.2,ratingcount: 45 , cuisine: 'not spicy')
+
+pairing1 = Pairing.create(restaurant: restaurant1, target_number_of_people: 5, current_number_of_people: 2, users: [user1, user2],meeting_time: DateTime.new(2023, 11, 14, 12, 0, 0))
+pairing2 = Pairing.create(restaurant: restaurant2, target_number_of_people: 4, current_number_of_people: 1, users: [user1], meeting_time: DateTime.new(2023, 11, 15, 14, 30, 0))
