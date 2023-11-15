@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    has_and_belongs_to_many :pairings
     has_secure_password
 
     # validates :uni, uniqueness: true 
