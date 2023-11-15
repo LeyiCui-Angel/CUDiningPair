@@ -28,8 +28,4 @@
     /* Make sure not to include styles that would cause a line break, like margin or display properties that expand the block */
 }
   
-  /* app/assets/stylesheets/application.css */
-/*
- *= require flatpickr
- */
 
