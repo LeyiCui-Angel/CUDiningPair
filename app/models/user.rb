@@ -2,8 +2,8 @@ class User < ApplicationRecord
     has_secure_password
 
     # validates :uni, uniqueness: true 
-    validates :password, confirmation: true
-    validates :password_confirmation, presence: true
+    validates :password, confirmation: true, if: :password_digest_changed?
+    validates :password_confirmation, presence: true, if: :password_digest_changed?
 
     #{ case_sensitive: true }
 

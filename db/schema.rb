@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20231101072337) do
+ActiveRecord::Schema.define(version: 20231113142754) do
 
   create_table "restaurants", force: :cascade do |t|
     t.decimal "custom_id"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20231101072337) do
     t.datetime "updated_at"
     t.string   "verification_code"
     t.string   "password_digest"
+    t.string   "gender"
+    t.string   "mbti"
   end
 
   add_index "users", ["uni"], name: "index_users_on_uni", unique: true

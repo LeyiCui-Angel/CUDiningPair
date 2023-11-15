@@ -17,7 +17,7 @@ class UsersController < ApplicationController
         flash[:notice] = "#{@user.name} was successfully updated."
         redirect_to user_path(@user)
       else
-        flash[:alert] = "Error updating user."
+        flash.now[:alert] = "Error updating user."
         render :edit
       end
     end
@@ -32,8 +32,14 @@ class UsersController < ApplicationController
 
     private
     def user_params
-      params.require(:user).permit(:uni, :name, :gender, :mbti)
+      # Only permit password and password confirmation if they are present in the params
+      if params[:user][:password].present?
+        params.require(:user).permit(:name, :gender, :mbti, :password, :password_confirmation)
+      else
+        params.require(:user).permit(:name, :gender, :mbti)
+      end
     end
+    
   
     # private
   
