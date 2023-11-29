@@ -25,3 +25,28 @@
   <%= link_to 'Edit', edit_restaurant_path(@restaurant), class: 'btn btn-primary col-2' %>
   <%= link_to 'Back to restaurant list', restaurants_path, class: 'btn btn-primary col-2' %>
 </div>
+
+<h3>Reviews:</h3>
+<% @reviews.each do |review| %>
+  <p>
+    <strong><%= review.user_name %></strong> - Rating: <%= review.rating %> - <%= review.comment %>
+  </p>
+<% end %>
+
+<%= form_for [@restaurant, Review.new], url: create_review_restaurant_path(@restaurant), method: :post do |f| %>
+  <div class="form-group">
+    <%= f.label :user_name, 'Your Name', class: 'col-form-label' %>
+    <%= f.text_field :user_name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :rating, 'Rating', class: 'col-form-label' %>
+    <%= f.select :rating, ['1', '2', '3', '4', '5'], {}, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :comment, 'Comment', class: 'col-form-label' %>
+    <%= f.text_area :comment, class: 'form-control' %>
+  </div>
+  <%= f.submit 'Create Review', class: 'btn btn-primary' %>
+<% end %>
+
+

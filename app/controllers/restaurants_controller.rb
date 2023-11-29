@@ -3,6 +3,7 @@ class RestaurantsController < ApplicationController
     def show
       id = params[:id] # Retrieve restaurant ID from URI route
       @restaurant = Restaurant.find(id) # Look up restaurant by unique ID
+      @reviews = @restaurant.reviews
       # Will render app/views/restaurants/show.<extension> by default
     end
   
@@ -66,10 +67,37 @@ class RestaurantsController < ApplicationController
       flash[:notice] = "#{@restaurant.name} was successfully updated."
       redirect_to restaurant_path(@restaurant)
     end
+
+    def create_review
+        @restaurant = Restaurant.find(params[:id])
+        @review = @restaurant.reviews.create(review_params)
+    
+        if @review.save
+          flash[:notice] = 'Review was successfully created.'
+          update_restaurant_rating
+        else
+          flash[:alert] = 'Error creating review.'
+        end
+    
+        redirect_to restaurant_path(@restaurant)
+      end
   
     private
     def restaurant_params
       params.require(:restaurant).permit(:name, :location, :rating, :cuisine)
+    end
+
+    def review_params
+        params.require(:review).permit(:user_name, :rating, :comment)
+    end
+
+    def update_restaurant_rating
+        total_rating = @restaurant.reviews.sum(:rating)
+        num_reviews = @restaurant.reviews.count
+    
+        new_average_rating = num_reviews.zero? ? 0 : total_rating.to_f / num_reviews
+    
+        @restaurant.update_attribute(:rating, new_average_rating)
     end
   end
   

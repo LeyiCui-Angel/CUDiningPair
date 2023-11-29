@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20231113142754) do
+ActiveRecord::Schema.define(version: 20231129200935) do
 
   create_table "pairings", force: :cascade do |t|
     t.integer  "restaurant_id",            null: false
@@ -35,6 +35,18 @@ ActiveRecord::Schema.define(version: 20231113142754) do
     t.decimal "ratingcount"
     t.string  "cuisine"
   end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "restaurant_id"
+    t.string   "user_name"
+    t.decimal  "rating",        precision: 3, scale: 1
+    t.decimal  "rating_count",  precision: 5, scale: 2
+    t.text     "comment"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+  end
+
+  add_index "reviews", ["restaurant_id"], name: "index_reviews_on_restaurant_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

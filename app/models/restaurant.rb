@@ -1,6 +1,6 @@
 class Restaurant < ActiveRecord::Base
-  has_many :pairings
-    
+  has_many :pairings, dependent: :destroy
+  has_many :reviews, dependent: :destroy
     def self.cuisine(rating, cuisine_list)
         restaurants=[]
         cuisine_list.each {|cuisine|
