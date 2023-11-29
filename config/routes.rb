@@ -21,6 +21,11 @@ Rails.application.routes.draw do
 
   # Merge the 'restaurants' route here
   resources :restaurants
+
+  resources :restaurants do
+    post 'create_review', on: :member
+  end
+  
   
   # Any additional routes can go here...
   resources :pairings 

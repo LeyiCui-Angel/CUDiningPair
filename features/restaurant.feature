@@ -33,12 +33,10 @@ Scenario: edit restaurant
     Then I should see "Edit Existing Restaurant"
     And I fill in "Name" with "Bad Restaurant"
     And I fill in "Location" with "No Location"
-    And I select "1" from "Rating"
     And I select "Vege" from "Cuisine"
     And I press "Update Restaurant Info"
     Then I should see "Bad Restaurant"
     Then I should see "No Location"
-    Then I should see "1.0"
     Then I should see "Vege"
     When I click "Back to restaurant list"
     Then I should see "All Restaurants"
@@ -81,4 +79,19 @@ Scenario: cancel changes
   Then I click "Edit"
   Then I click "Cancel"
   Then I should see "All Restaurants"
-  
+
+Scenario: add review
+  Given I am on the restaurants page
+  When I click "More about Restaurant A"
+  And I fill in "Your Name" with "bbb"
+  And I select "1" from "Rating"
+  And I fill in "Comment" with "This is the worst restaurant ever"
+  And I press "Create Review"
+  Then I should see "bbb - Rating: 1.0 - This is the worst restaurant ever"
+  And I fill in "Your Name" with "ccc"
+  And I select "2" from "Rating"
+  And I fill in "Comment" with "Bad"
+  And I press "Create Review"
+  Then I should see "ccc - Rating: 2.0 - Bad"
+  Then I should see "Rating: 1.5"
+
