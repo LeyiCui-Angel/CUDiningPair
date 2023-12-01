@@ -31,6 +31,10 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
+    def verification
+      # Logic for verification page (if any)
+    end
+
     private
     def user_params
       # Only permit password and password confirmation if they are present in the params

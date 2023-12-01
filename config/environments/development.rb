@@ -45,5 +45,14 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "your_app_name_#{Rails.env}"
 
   # Send email
-  config.action_mailer.default_url_options = { host: 'https://cudiningpair-1-9c6393863cd3.herokuapp.com'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.sendgrid.net',
+    port: 25,
+    domain: 'gmail.com',
+    user_name: 'apikey', # This is literally the word 'apikey', NOT the ID of your API key
+    password: ENV['SENDGRID_API_KEY'],
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
 end
