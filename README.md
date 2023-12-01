@@ -43,7 +43,7 @@ Currently for iteration2, we added two functions: edit user profile and initiate
 
 6. Going back to the welcome/index page, you can click on “Restaurants” to access restaurant informations. In restaurants page, user can add restaurant data and filter restaurants based on preference.
 
-7. You can see name, location, rating for each of the uploaded restaurant in the list together with the restaurant's cuisine style, like hot spicy or not.
+7. You can see name, location, rating for each of the uploaded restaurant in the list together with the restaurant's cuisine style, like hot spicy or not. By clicking the more info of each restaurant, you can see reviews of the users, including comments and ratings. Also, you can add your own review about this restaurant.
 
 8. You can filter the restaurant with ratings and cuisine by simply click the corresponding button at top of the list and click on "Filter".
 
