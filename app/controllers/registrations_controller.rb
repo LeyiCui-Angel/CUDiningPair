@@ -28,7 +28,7 @@ class RegistrationsController < ApplicationController
       # UserMailer.send_verification_code(@user, @user.verification_code).deliver_now
       # redirect_to verification_path
       Rails.logger.info "Sending verification email to #{@user.email}"
-      UserMailer.send_email('lc3542@columbia.edu', 'Account Verification', 'Your verification code is: ').deliver_now
+      UserMailer.send_email(@user.email, 'Account Verification', 'Your verification code is: '+@user.verification_code).deliver_now
   
       # Redirect to the verification page
       redirect_to verification_path, notice: 'Please check your email to verify your account.'
