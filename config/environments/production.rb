@@ -73,4 +73,15 @@ Rails.application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.sendgrid.net',
+    port: 25,
+    domain: 'gmail.com',
+    user_name: 'apikey', # This is literally the word 'apikey', NOT the ID of your API key
+    password: ENV['SENDGRID_API_KEY'],
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
 end

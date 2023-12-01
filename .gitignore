@@ -4,3 +4,4 @@
 /log/*
 *.log
 CUDiningPair/coverage/.resultset.json
+sendgrid.env

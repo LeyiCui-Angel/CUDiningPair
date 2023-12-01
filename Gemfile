@@ -5,6 +5,8 @@ gem 'rails', '4.2.10'
 
 gem 'faker'
 
+gem 'sendgrid-ruby'
+
 # for user password
 gem 'bcrypt'
 

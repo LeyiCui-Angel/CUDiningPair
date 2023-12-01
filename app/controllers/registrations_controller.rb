@@ -27,7 +27,11 @@ class RegistrationsController < ApplicationController
     if @user.save
       # UserMailer.send_verification_code(@user, @user.verification_code).deliver_now
       # redirect_to verification_path
-      redirect_to login_path
+      Rails.logger.info "Sending verification email to #{@user.email}"
+      UserMailer.send_email('lc3542@columbia.edu', 'Account Verification', 'Your verification code is: ').deliver_now
+  
+      # Redirect to the verification page
+      redirect_to verification_path, notice: 'Please check your email to verify your account.'
     end
     rescue ActiveRecord::RecordNotUnique => e
       # Handle the unique constraint violation
