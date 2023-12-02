@@ -1,11 +1,11 @@
 <h2>All Pairings</h2>
 
-<%= link_to 'Add new pairing', new_pairing_path, class: 'btn btn-primary' %>
 <div class="text-right">
   <%= link_to 'Back to Welcome Page', welcome_index_path, class: 'btn btn-primary' %>
 </div>
 <% if @pairings.any? %>
-  <table class="table table-striped col-md-12" id="pairings">
+  <div class="table-container">
+  <table class="table table-striped col-md-12 table-with-margin" id="pairings">
     <thead>
       <tr>
         <th>Restaurant</th>
@@ -46,6 +46,10 @@
       <% end %>
     </tbody>
   </table>
+    <div class="table-actions">
+      <%= link_to 'Add new pairing', new_pairing_path, class: 'btn btn-primary btn-add-pairing' %>
+    </div>
+  </div>
 <% else %>
   <p>No pairings available. <%= link_to 'Add a new pairing', new_pairing_path %>!</p>
 <% end %>

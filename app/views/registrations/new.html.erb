@@ -1,23 +1,28 @@
-<%= form_for :user, url: signup_path do |f| %>
-    <div class="field">
-      <%= f.label :uni, "UNI" %><br>
-      <%= f.text_field :uni %>
-    </div>
-    <div class="field">
-      <%= f.label :password, "Password" %><br>
-      <%= f.password_field :password %>
-    </div>
-    <div class="field">
-    <%= f.label :password_confirmation, "Password confirmation"%><br>
-    <%= f.password_field :password_confirmation %>
-    </div>
-    <div class="actions">
-      <%= f.submit "Sign up" %>
-    </div>
-<% end %>
 
-<p>Already have an account? <%= link_to 'Log in here', login_path %></p>
+  <div class="registration-container">
+    <div class="form-container">
+      <%= form_for :user, url: signup_path do |f| %>
+          <div class="field">
+            <%= f.label :uni, "UNI" %><br>
+            <%= f.text_field :uni %>
+          </div>
+          <div class="field">
+            <%= f.label :password, "Password" %><br>
+            <%= f.password_field :password %>
+          </div>
+          <div class="field">
+          <%= f.label :password_confirmation, "Password confirmation"%><br>
+          <%= f.password_field :password_confirmation %>
+          </div>
+          <div class="actions">
+            <%= f.submit "Sign up", class: 'btn btn-primary' %>
+          </div>
+      <% end %>
 
-<% if flash[:error].present? %>
-  <div class="alert alert-danger"><%= flash[:error] %></div>
-<% end %>
+      <p>Already have an account? <%= link_to 'Log in here', login_path %></p> 
+    </div>
+
+  <% if flash[:error].present? %>
+    <div class="alert alert-danger"><%= flash[:error] %></div>
+  <% end %>
+</div>
