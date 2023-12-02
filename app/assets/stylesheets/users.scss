@@ -1,3 +1,29 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.user-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+}
+
+.user-data {
+	text-align: left; /* Align text to the right within user-data */
+}
+  
+.button-group {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15px; /* Adjust the margin as needed */
+}
+  
+.button-space {
+	width: 10px; /* Adjust the space between buttons as needed */
+}
+
+.user-data p strong {
+	font-weight: bold;
+	font-size: 18px;
+}

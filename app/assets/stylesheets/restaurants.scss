@@ -1,0 +1,22 @@
+.restaurant-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 80vh; /* Optional: Set the container height to the full viewport height */
+}
+.btn {
+    font-size: 14px; /* Adjust the font size for all buttons */
+}
+
+.btn-primary {
+    font-size: 14px; /* Adjust the font size for primary buttons */
+}
+
+.btn-filter {
+    margin-top: 10px; /* Add some top margin */
+}
+
+.btn-back-to-welcome {
+    margin-bottom: 20px;
+}

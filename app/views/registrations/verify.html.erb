@@ -1,13 +1,15 @@
-<h2>Verification</h2>
+<div class="registration-container">
+  <h2>Verification</h2>
 
-<p id="verify">Verificaion email sent. Enter the 6-digit code:</p>
+  <p id="verify">Verificaion email sent. Enter the 6-digit code:</p>
 
-<%= form_for :registration, url: check_verification_path, method: :post do |f| %>
-    <%= f.label :verification_code, "Verification Code" %>
-    <%= f.text_field :verification_code %>
-    <%= f.submit "Verify" %>
-<% end %>
-  
-<% if flash[:error].present? %>
-  <div class="alert alert-danger"><%= flash[:error] %></div>
-<% end %>
+  <%= form_for :registration, url: check_verification_path, method: :post do |f| %>
+      <%= f.label :verification_code, "Verification Code" %>
+      <%= f.text_field :verification_code %>
+      <%= f.submit "Verify" %>
+  <% end %>
+    
+  <% if flash[:error].present? %>
+    <div class="alert alert-danger"><%= flash[:error] %></div>
+  <% end %>
+</div>

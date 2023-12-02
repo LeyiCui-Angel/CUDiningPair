@@ -1,3 +1,45 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.welcome-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 80vh; /* Optional: Set the container height to the full viewport height */
+  }
+
+.nav-list {
+	list-style: none;
+	padding: 0;
+	margin-top: 20px; /* Adjust the margin as needed */
+}
+  
+.nav-item {
+	display: inline-block;
+	margin-right: 20px; /* Adjust the margin between items as needed */
+}
+  
+.nav-link {
+	text-decoration: none;
+	color: #007bff; /* Adjust the color as needed */
+	font-weight: bold;
+	font-size: 20px;
+}
+  
+.nav-link:hover {
+	text-decoration: underline; /* Change the style on hover as needed */
+}
+
+.navbar-nav .nav-item a {
+    font-size: 16px;
+    font-weight: bold; /* Adjust the font weight if needed */
+    color: #333; /* Adjust the font color */
+    /* Add any other styles you want to apply */
+}
+
+.logout-btn {
+    font-size: 14px;
+	margin: 0; 
+}
+
