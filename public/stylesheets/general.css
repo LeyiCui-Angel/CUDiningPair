@@ -1,108 +1,83 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: White;
-  color: DarkSlateGrey;
-  font-family: Tahoma, Verdana, sans-serif;
-  font-size: 10pt;
+  background: #f5f5f5; /* Light grey for a softer look */
+  color: #333333; /* Darker grey for better readability */
+  font-family: 'Roboto', 'Arial', sans-serif; /* Modern font style */
+  font-size: 12pt; /* Slightly larger font for readability */
+}
+h1 {
+  margin: 0 0 1em;
+  padding: 15px;
+  background-color: #ff7043; /* Warm, inviting orange */
+  color: white;
+  border-bottom: 4px solid #e64a19; /* Darker shade for depth */
+  font-size: 2.5em; /* Larger size for prominence */
+}
+h1 a {
+  text-decoration: none;
+  color: white;
 }
 h2 {
   margin: 1em 0 .5em;
   padding: 0;
-  background: transparent;
-  color: maroon;
-  font-size: 1.5em;
+  color: #ff7043; /* Echoing the h1 color for consistency */
+  font-size: 1.8em; /* Slightly larger for importance */
 }
 .odd {
-  background: white;
+  background: #ffffff; /* Pure white for clean alternating rows */
 }
 .even {
-  background: wheat;
+  background: #eeeeee; /* Light grey to subtly distinguish rows */
 }
 a {
-  background: transparent;
-  color: maroon;
-  text-decoration: underline;
+  color: #00796b; /* Teal color for a fresh, modern look */
+  text-decoration: none; /* Removing underline for cleaner look */
   font-weight: bold;
 }
-h1 {
-  margin: 0 0 1em;
-  padding: 10px;
-  background-color: orange;
-  color: white;
-  border-bottom: 4px solid gold;
-  font-size: 2em;
-}
-h1 a {
-  text-decoration: none;
-  background: transparent;
-  color: white;
+a:hover {
+  text-decoration: underline; /* Underline on hover for interactivity */
 }
 table#movies {
   border-collapse: collapse;
   width: 100%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #00796b; /* Matching the link color */
 }
 table#movies th {
-  border: 2px solid black;
+  border: 2px solid #00796b; /* Consistent with link color */
+  background-color: #e0f2f1; /* Light teal for header background */
+  color: #004d40; /* Dark teal for contrast */
   font-weight: bold;
 }
 table#movies th, table#movies td {
-  padding: 4px;
+  padding: 8px; /* Increased padding for better spacing */
   text-align: left;
 }
 em {
   font-weight: bold;
-  font-style: normal;
+  color: #ff7043; /* Highlighting text with h1 color */
 }
 div#body {
   margin: 0;
-  padding: 0 20px 20px;
+  padding: 20px; /* Increased padding for better layout */
 }
-.errorExplanation {
-  padding: 0 10px;
-  margin: 1em 2px;
-  border: 2px solid red;
-  background: #fcb;
+.errorExplanation, .fieldWithErrors input, .fieldWithErrors textarea, .fieldWithErrors select {
+  background: #ffebee; /* Light red background for errors */
+  border-color: #e57373; /* Slightly darker red for border */
 }
-.errorExplanation h2 {
-  font-size: 1.1em;
-  color: red;
-}
-.errorExplanation ul {
-  list-style: disc inside;
-}
-div.fieldWithErrors {
-  display: inline;
-}
-.fieldWithErrors input, .fieldWithErrors textarea, .fieldWithErrors select {
-  background: #fcb;
+.errorExplanation h2, .errorExplanation ul, #flash_error {
+  color: #d32f2f; /* Darker red for error text */
 }
 #flash_notice {
-  background: rosybrown;
-  margin: 1em 0;
-  padding: 4px;
+  background: #c8e6c9; /* Light green for success messages */
+  color: #388e3c; /* Dark green for text */
 }
-#flash_error {
-  background: pink;
-  margin: 1em 0;
-  padding: 4px;
-}
-ul#page_nav {
-  margin: 2em 0 0;
-  padding: 0;
-  list-style: none;
-}
-ul#page_nav li {
-  margin: 1em 0;
-  padding: 0;
-}
-form ul {
+ul#page_nav, form ul {
   margin: 10px;
   padding: 0;
   list-style: none;
 }
-form li {
+ul#page_nav li, form li {
   margin: 1em 0;
   padding: 0;
 }
@@ -114,4 +89,13 @@ form label {
 }
 form #submit {
   margin-left: 150px;
+  background-color: #ff7043; /* Consistent button color with h1 */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+form #submit:hover {
+  background-color: #e64a19; /* Darker on hover */
 }
