@@ -36,8 +36,8 @@ restaurants = [
 restaurants.each do |restaurant|
   Restaurant.create!(restaurant)
 end
-restaurant1 = Restaurant.create(custom_id: 3, name: 'Shake Shack', location: '2957 Broadway', rating: 4.2,ratingcount: 45 , cuisine: 'not spicy')
-restaurant2 = Restaurant.create(custom_id: 3, name: 'Shake Shack', location: '2957 Broadway', rating: 4.2,ratingcount: 45 , cuisine: 'not spicy')
+restaurant1 = Restaurant.create(custom_id: 4, name: 'Sweetgreen', location: '2937 Broadway', rating: 4.0,ratingcount: 45 , cuisine: 'not spicy')
+restaurant2 = Restaurant.create(custom_id: 5, name: 'Bánh', location: '942 Amsterdam Ave', rating: 4.6,ratingcount: 45 , cuisine: 'not spicy')
 
 pairing1 = Pairing.create(restaurant: restaurant1, target_number_of_people: 5, current_number_of_people: 2, users: [user1, user2],meeting_time: DateTime.new(2023, 11, 14, 12, 0, 0))
 pairing2 = Pairing.create(restaurant: restaurant2, target_number_of_people: 4, current_number_of_people: 1, users: [user1], meeting_time: DateTime.new(2023, 11, 15, 14, 30, 0))
