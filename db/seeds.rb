@@ -27,17 +27,17 @@ user2=User.create!(
 )
 
 restaurants = [
-  {custom_id: 1, name: 'Restaurant A', location: '123 Main St', rating: 4.5, ratingcount: 100, cuisine: 'hot spicy' },
-  {custom_id: 2, name: 'Restaurant B', location: '456 Elm St', rating: 3.8, ratingcount: 11 , cuisine: 'vege'},
-  {custom_id: 3, name: 'Restaurant C', location: '789 Oak St', rating: 4.2,ratingcount: 45 , cuisine: 'not spicy'}
+  {custom_id: 1, name: 'Happy Hot Hunan', location: '969 Amsterdam Ave', rating: 4.5, ratingcount: 100, cuisine: 'hot spicy' },
+  {custom_id: 2, name: 'VeganHood', location: '2100 Frederick Douglass Blvd', rating: 3.8, ratingcount: 11 , cuisine: 'vege'},
+  {custom_id: 3, name: 'Shake Shack', location: '2957 Broadway', rating: 4.2,ratingcount: 45 , cuisine: 'not spicy'}
   # Add more restaurants as needed
 ]
 
 restaurants.each do |restaurant|
   Restaurant.create!(restaurant)
 end
-restaurant1 = Restaurant.create(custom_id: 3, name: 'Restaurant1', location: '789 Oak St', rating: 4.2,ratingcount: 45 , cuisine: 'not spicy')
-restaurant2 = Restaurant.create(custom_id: 3, name: 'Restaurant2', location: '789 Oak St', rating: 4.2,ratingcount: 45 , cuisine: 'not spicy')
+restaurant1 = Restaurant.create(custom_id: 3, name: 'Shake Shack', location: '2957 Broadway', rating: 4.2,ratingcount: 45 , cuisine: 'not spicy')
+restaurant2 = Restaurant.create(custom_id: 3, name: 'Shake Shack', location: '2957 Broadway', rating: 4.2,ratingcount: 45 , cuisine: 'not spicy')
 
 pairing1 = Pairing.create(restaurant: restaurant1, target_number_of_people: 5, current_number_of_people: 2, users: [user1, user2],meeting_time: DateTime.new(2023, 11, 14, 12, 0, 0))
 pairing2 = Pairing.create(restaurant: restaurant2, target_number_of_people: 4, current_number_of_people: 1, users: [user1], meeting_time: DateTime.new(2023, 11, 15, 14, 30, 0))
