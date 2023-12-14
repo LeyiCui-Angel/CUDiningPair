@@ -21,10 +21,11 @@ Rails.application.routes.draw do
   resources :users
 
   # Merge the 'restaurants' route here
-  resources :restaurants
+  # resources :restaurants
 
   resources :restaurants do
     post 'create_review', on: :member
+    get 'subscribe', on: :member
   end
   
   

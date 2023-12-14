@@ -1,6 +1,9 @@
 class User < ApplicationRecord
     has_and_belongs_to_many :pairings
     has_secure_password
+    has_many :subscriptions
+    has_many :subscribed_restaurants, through: :subscriptions, source: :restaurant
+
 
     # validates :uni, uniqueness: true 
     validates :password, confirmation: true, if: :password_digest_changed?

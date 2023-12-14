@@ -19,6 +19,11 @@ class RestaurantsController < ApplicationController
       else
         @cuisine_to_show=['Hot spicy','vege','not spicy']
       end
+      # if params[:cuisine]
+      #   @cuisine_to_show = params[:cuisine].is_a?(Hash) ? params[:cuisine].keys : [params[:cuisine]]
+      # else
+      #   @cuisine_to_show = ['Hot spicy', 'vege', 'not spicy']
+      # end
 
       #check if selected rating
       if params[:rating]
@@ -44,6 +49,12 @@ class RestaurantsController < ApplicationController
         @restaurants = Restaurant.cuisine(@rating_to_show, @cuisine_to_show)
       else
         @restaurants = Restaurant.cuisine(1, @cuisine_to_show)
+      end
+
+      if current_user
+        @restaurants.each do |restaurant|
+          restaurant.subscribed = restaurant.subscribed_by_user?(current_user)
+        end
       end
     end
   
@@ -81,10 +92,22 @@ class RestaurantsController < ApplicationController
     
         redirect_to restaurant_path(@restaurant)
       end
+
+      def subscribe
+        @restaurant = Restaurant.find(params[:id])
+    
+        if current_user.subscribed_restaurants.include?(@restaurant)
+          current_user.subscribed_restaurants.delete(@restaurant)
+        else
+          current_user.subscribed_restaurants << @restaurant
+        end
+    
+        # No need for respond_to, Rails will automatically choose the correct format
+      end
   
     private
     def restaurant_params
-      params.require(:restaurant).permit(:name, :location, :rating, :cuisine)
+      params.require(:restaurant).permit(:name, :location, :rating, :cuisine, :subscribed.to_s)
     end
 
     def review_params

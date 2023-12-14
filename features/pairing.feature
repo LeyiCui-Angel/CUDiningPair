@@ -34,7 +34,7 @@ Background: restaurants in database
 Scenario: pairings page check 
     Given I am on Pairings page
     Then I should see "No pairings available"
-    And I click "Add new pairing"
+    And I click "Add a new pairing"
     Then I should see "Create New Pairing"
     Then I fill in "Target Number of People" with "0"
     And I press "Create Pairing"
@@ -42,9 +42,9 @@ Scenario: pairings page check
     Then I fill in "Target Number of People" with "2"
     And I press "Create Pairing"
     Then I should see "Create New Pairing"
-    Then I set the meeting time to December
+    Then I set the meeting time to 2025
     And I press "Create Pairing"
-    Then I should see "Pairing created successfully."
+    Then I should see "Pairing created successfully"
     And I clicking the "Join" button
     Then I should see "You are already part of this pairing"
     Then I click "Back to Welcome Page"

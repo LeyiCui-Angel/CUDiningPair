@@ -1,0 +1,11 @@
+<!-- app/views/restaurants/subscribe.html.erb -->
+<h1><%= @restaurant.name %></h1>
+
+<% if current_user && current_user.subscribed_restaurants.include?(@restaurant) %>
+  <!-- User is subscribed, show unsubscribe button -->
+  <p>Subscription successful!</p>
+<% else %>
+  <!-- User is not subscribed, show subscribe button -->
+  <p>Unsubscription successful!</p>
+<% end %>
+<%= link_to 'Back to restaurant list', restaurants_path, class: 'btn btn-primary col-2' %>

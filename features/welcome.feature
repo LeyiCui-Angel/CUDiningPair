@@ -14,7 +14,7 @@ Background: login
 
 Scenario: testing links
     Given I am on the welcome page
-    Then I should see "This is the landing page."
+    Then I should see "This is your home page"
     And I click "UNI: user12345"
     Then I should see "User Profile"
 
@@ -23,7 +23,7 @@ Scenario: testing restaurant
     And I click "Restaurants"
     Then I should see "All Restaurants"
     And I click "Back to Welcome Page"
-    Then I should see "This is the landing page."
+    Then I should see "This is your home page"
     
 Scenario: log Out
     Given I am on the welcome page

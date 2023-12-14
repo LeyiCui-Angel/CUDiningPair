@@ -8,6 +8,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.decimal :ratingcount
       t.string :cuisine
       t.references :reviews
+      t.boolean :subscribed, default: false, null: false
     end
   end
 

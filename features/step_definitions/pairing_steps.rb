@@ -2,9 +2,9 @@ Given ("I am on Pairings page") do
   visit '/pairings'
 end
 
-When("I set the meeting time to December") do
+When("I set the meeting time to 2025") do
   # Assuming you have a form field with the id 'pairing_meeting_time'
-  select 'December', from: 'pairing_meeting_time_2i'
+  select '2025', from: 'pairing_meeting_time_1i'
 end
 
 When("I select {string} from the restaurant dropdown") do |restaurant_name|
