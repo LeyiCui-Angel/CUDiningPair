@@ -1,27 +1,31 @@
- <!-- app/views/welcome/index.html.erb -->
-<% if current_user %>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- ... other navbar code ... -->
+   <!-- app/views/welcome/index.html.erb -->
+  <% if current_user %>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- ... other navbar code ... -->
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <%= link_to "UNI: #{current_user.uni}", user_path(current_user), class: 'nav-link' %>
-        </li>
-        <li class="nav-item">
-          <%= button_to 'Log Out', logout_path, method: :delete, class: 'nav-link', class: 'btn btn-primary' %>
-        </li>
-      </ul>
-    </div>
-  </nav>
-<% end %>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <%= link_to "UNI: #{current_user.uni}", user_path(current_user), class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= button_to 'Log Out', logout_path, method: :delete, class: 'nav-link', class: 'btn btn-primary logout-btn' %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <% end %>
 
-<h1>Welcome to CUDiningPair</h1>
-<p>This is the landing page.</p>
+<div class="welcome-container">  
+  <h1>Welcome to CUDiningPair</h1>
+  <p>This is your home page.</p>
 
- <li class="nav-item">
-          <%= link_to 'Restaurants', restaurants_path, class: 'nav-link' %>
-  </li>
- <li class="nav-item">
-          <%= link_to 'Pairings', pairings_path, class: 'nav-link' %>
-  </li>
+  <ul class="nav-list">
+    <li class="nav-item">
+      <%= link_to 'Restaurants', restaurants_path, class: 'nav-link' %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Pairings', pairings_path, class: 'nav-link' %>
+    </li>
+  </ul>
+</div>

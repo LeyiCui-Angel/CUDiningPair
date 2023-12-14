@@ -11,6 +11,6 @@
  <%= select :restaurant, :cuisine, ['Hot Spicy', 'Vege', 'Not Spicy'], { selected: 'Hot Spicy' }, { class: 'form-control' } %>
   <br/>
   <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
-  <%= link_to 'Cancel', restaurants_path, :class => 'btn btn-secondary' %>
+  <%= link_to 'Cancel', restaurants_path, :class => 'btn btn-primary' %>
 <% end %>
 

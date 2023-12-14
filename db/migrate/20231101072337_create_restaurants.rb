@@ -7,7 +7,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.decimal :rating, precision: 3, scale: 1
       t.decimal :ratingcount
       t.string :cuisine
-      t.references :review, foreign_key: true
+      t.references :reviews
     end
   end
 
