@@ -5,11 +5,15 @@ class PairingsController < ApplicationController
     @users = User.all
     @restaurants = Restaurant.all
     @available_pairings = Pairing.where('current_number_of_people < target_number_of_people')
+
   end
 
   def create
 
     create_new_pairing
+
+    ## Send emails to subscribed users
+    #send_emails_to_subscribers(@pairing) if @pairing.persisted?
 
   end
 
@@ -35,12 +39,7 @@ class PairingsController < ApplicationController
     redirect_to pairing_path(@pairing)
   end
 
-  # def destroy
-  #   @pairing = Pairing.find(params[:id])
-  #   @pairing.destroy
-  #   flash[:notice] = "Restaurant Pairing deleted."
-  #   redirect_to pairings_path
-  # end
+
 
   def join
     @pairing = Pairing.find(params[:id])
@@ -85,6 +84,18 @@ class PairingsController < ApplicationController
       render 'new'
     end
   end
+
+  # def send_emails_to_subscribers(pairing)
+  #   subscribed_users = subscribers_for_restaurant(pairing.restaurant)
+
+  #   subscribed_users.each do |user|
+  #     # Your email sending logic goes here
+  #   end
+  # end
+
+  # def subscribers_for_restaurant(restaurant)
+  #   restaurant.subscribers
+  # end
 
   
 end

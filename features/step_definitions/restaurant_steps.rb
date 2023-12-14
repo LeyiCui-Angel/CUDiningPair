@@ -57,3 +57,4 @@ When(/^I (un)?check "([^"]*)"$/) do |uncheck, checkbox_label|
       check(checkbox_label)
     end
 end
+

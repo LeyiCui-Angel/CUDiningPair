@@ -35,6 +35,7 @@
       <th>Location</th>
       <th>Cuisine</th>
       <th>More Info</th>
+      <th>Subscribe</th>
     </tr>
   </thead>
   <tbody>
@@ -54,6 +55,15 @@
         </td>
         <td>
           <%= link_to "More about #{restaurant.name}", restaurant_path(restaurant) %>
+        </td>
+        <td>
+          <% if current_user %>
+            <% if restaurant.subscribed %>
+              <%= link_to 'Unsubscribe', subscribe_restaurant_path(restaurant), remote: true, method: :put, class: 'btn btn-warning' %>
+            <% else %>
+              <%= link_to 'Subscribe', subscribe_restaurant_path(restaurant), remote: true, method: :put, class: 'btn btn-primary' %>
+            <% end %>
+          <% end %>
         </td>
       </tr>
     <% end %>
