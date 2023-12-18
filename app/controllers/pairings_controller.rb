@@ -92,7 +92,7 @@ class PairingsController < ApplicationController
   
     subscribed_users.each do |user|
       # Use your existing UserMailer method to send the email
-      UserMailer.send_email(user.email, subject, content_value).deliver_later
+      UserMailer.send_email(user.email, subject, content_value).deliver_now
     end
   end
   
