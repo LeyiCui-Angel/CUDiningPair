@@ -1,5 +1,5 @@
 # CUDiningPair
-Group project for Engineering SaaS Fall 2023
+Group project for Engineering SaaS Fall 2023, Final submission: final branch
 
 ### Github Link
 https://github.com/LeyiCui-Angel/CUDiningPair
