@@ -78,6 +78,7 @@ class PairingsController < ApplicationController
     if @pairing.save
       flash[:notice] = "Pairing created successfully."
       current_user.pairings << @pairing
+      send_emails_to_subscribers(@pairing)
       redirect_to pairings_path
     else
 
