@@ -85,17 +85,20 @@ class PairingsController < ApplicationController
     end
   end
 
-  # def send_emails_to_subscribers(pairing)
-  #   subscribed_users = subscribers_for_restaurant(pairing.restaurant)
-
-  #   subscribed_users.each do |user|
-  #     # Your email sending logic goes here
-  #   end
-  # end
-
-  # def subscribers_for_restaurant(restaurant)
-  #   restaurant.subscribers
-  # end
+  def send_emails_to_subscribers(pairing)
+    subscribed_users = subscribers_for_restaurant(pairing.restaurant)
+    subject = "New Pairing Available at #{pairing.restaurant.name}"
+    content_value = "A new pairing is available. Please visit the website to join."
+  
+    subscribed_users.each do |user|
+      # Use your existing UserMailer method to send the email
+      UserMailer.send_email(user.email, subject, content_value).deliver_later
+    end
+  end
+  
+  def subscribers_for_restaurant(restaurant)
+    restaurant.subscribers
+  end  
 
   
 end
