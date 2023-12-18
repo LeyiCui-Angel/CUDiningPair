@@ -15,6 +15,9 @@ Leyi Cui (lc3542)
 ### Heroku Link
 https://cudiningpair-1-9c6393863cd3.herokuapp.com/
 
+### Demo Video Link
+https://youtu.be/G3090tlTq5Q
+
 ### Run locally
 1. Clone the repo
 2. bundle install
@@ -29,7 +32,11 @@ UNI: ab123
 Password: ab123
 
 ### Functions
-Currently for iteration2, we added two functions: edit user profile and initiate pairing.
+For the final iteration, we added subscribe function which will send updates about the restaurant that the user subscribed. 
+
+We were able to implement all main functions from our proposal except for the no-show policy. Our initial no-show policy was letting user report other users who did not show up. However, we thought some users can abuse this reporting system to intentionally report others, so we ended up changing. Instead, for now we just added a warning so that people can't undo pairing once they decide to join. We will further have to come up with a better function to control no-show problems.
+
+Following are the instructions for our main functions:
 
 1. First loading the app, you will be directed to the login page. There, you can click “Sign up here” and move on to the registration page (assuming that you don't have an account already).
 
@@ -47,16 +54,18 @@ Currently for iteration2, we added two functions: edit user profile and initiate
 
 8. You can filter the restaurant with ratings and cuisine by simply click the corresponding button at top of the list and click on "Filter".
 
-9. Going back to the welcome/index page, once you click the "Pairings", you will enter the All pairings table with all existing pairings.
+9. When you click subscribe button on the right side of the restaruant row, you will be emails regarding any updates on the restaurant.
 
-10. You can add new pairing by click the button at the top left of the page. Once you select the target restaurant, target number of people and target meeting time (at least one hour later than current time), you then press the button below of creating pair. You will be redirected to the all pairings page with your new pairing added.
+10. Going back to the welcome/index page, once you click the "Pairings", you will enter the All pairings table with all existing pairings.
 
-11. You cannot enter the same pairing twice but you can enter different pairings as many as you want. Once the pairing is full, user cannot join this specific pairing anymore.
+11. You can add new pairing by click the button at the top left of the page. Once you select the target restaurant, target number of people and target meeting time (at least one hour later than current time), you then press the button below of creating pair. You will be redirected to the all pairings page with your new pairing added.
 
-12. If you want to know more info about pairing, you can click that corresponding button and see who is inside of this pairing. You can also edit the info if you would like to.
+12. You cannot enter the same pairing twice but you can enter different pairings as many as you want. Once the pairing is full, user cannot join this specific pairing anymore.
+
+13. If you want to know more info about pairing, you can click that corresponding button and see who is inside of this pairing. You can also edit the info if you would like to.
 
 ## Instructions to test CUDiningPair
-Overall test coverage score: 91.84
+Overall test coverage score: 91.63
 
 ### Test locally
 1. Clone the repo
